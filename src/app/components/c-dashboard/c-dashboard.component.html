@@ -1,0 +1,188 @@
+<div class="container-fluid">
+  <!-- student progress chart start-->
+  <div
+    [class.dark-mode]="isDarkMode"
+    class="my-chart"
+    style="
+      position: absolute;
+      background-color: #c7ecee;
+      border-radius: 10px;
+      top: 58vh;
+      right: 0%;
+      box-shadow: inset 0 3px 4px rgba(162, 155, 254, 0.365);
+    "
+  >
+    <!-- title start-->
+    <h6
+      class="chart-lable"
+      style="font-size: 20px; position: relative; left: 40%; padding-top: 4%"
+    >
+      Student Progress
+    </h6>
+    <!-- title end-->
+
+    <!-- chart start -->
+    <div
+      [class.dark-mode]="isDarkMode"
+      class="container"
+      style="position: relative; top: 5%; padding-bottom: 2%"
+    >
+      <canvas id="progress_chart" height="175%"></canvas>
+    </div>
+    <!-- chart end -->
+  </div>
+  <!-- student progress chart end-->
+
+  <div class="topbar">
+    <div class="toggle"></div>
+
+    <div class="search">
+      <label>
+        <input
+          type="text"
+          placeholder="Search here"
+          class="search-bar"
+          [class.dark-mode]="isDarkMode"
+        />
+      </label>
+    </div>
+
+    <div class="toggle"></div>
+  </div>
+
+  <!-- ======================= Cards ================== -->
+  <div class="cardBox" [class.dark-mode]="isDarkMode">
+    <div class="card" [class.dark-mode]="isDarkMode">
+      <div>
+        <div class="numbers" [class.dark-mode]="isDarkMode">13/30</div>
+        <div class="cardName" [class.dark-mode]="isDarkMode">
+          Task Complete level
+        </div>
+      </div>
+
+      <div class="iconBx"></div>
+    </div>
+
+    <div class="card" [class.dark-mode]="isDarkMode">
+      <div>
+        <div class="numbers" [class.dark-mode]="isDarkMode">80</div>
+        <div class="cardName" [class.dark-mode]="isDarkMode">
+          Calls Taken Today
+        </div>
+      </div>
+
+      <div class="iconBx"></div>
+    </div>
+
+    <div class="card" [class.dark-mode]="isDarkMode">
+      <div>
+        <div class="numbers" [class.dark-mode]="isDarkMode">25</div>
+        <div class="cardName" [class.dark-mode]="isDarkMode">
+          Calls Recived Today
+        </div>
+      </div>
+
+      <div class="iconBx"></div>
+    </div>
+
+    <div class="card" [class.dark-mode]="isDarkMode">
+      <div>
+        <div class="numbers" [class.dark-mode]="isDarkMode">150</div>
+        <div class="cardName" [class.dark-mode]="isDarkMode">Student Count</div>
+      </div>
+
+      <div class="iconBx"></div>
+    </div>
+  </div>
+
+  <!-- ================ Order Details List ================= -->
+  <div class="details" [class.dark-mode]="isDarkMode">
+    <div class="recentOrders" [class.dark-mode]="isDarkMode">
+      <div class="cardHeader" [class.dark-mode]="isDarkMode">
+        <h2>Task List</h2>
+        <a (click)="goToTaskPage()" class="btn" [class.dark-mode]="isDarkMode"
+          >View All</a
+        >
+      </div>
+
+      <table [class.dark-mode]="isDarkMode" class="cutom-table">
+        <thead [class.dark-mode]="isDarkMode">
+          <tr [class.dark-mode]="isDarkMode">
+            <td [class.dark-mode]="isDarkMode">Title</td>
+            <td [class.dark-mode]="isDarkMode">Date</td>
+            <td [class.dark-mode]="isDarkMode">Time</td>
+            <td [class.dark-mode]="isDarkMode">Status</td>
+          </tr>
+        </thead>
+
+        <tbody [class.dark-mode]="isDarkMode">
+          <tr [class.dark-mode]="isDarkMode">
+            <td [class.dark-mode]="isDarkMode">Kamal Wickrama</td>
+            <td [class.dark-mode]="isDarkMode">01/11/2023</td>
+            <td [class.dark-mode]="isDarkMode">4.00</td>
+            <td [class.dark-mode]="isDarkMode">
+              <span class="status return">ToDo</span>
+            </td>
+          </tr>
+          <tr [class.dark-mode]="isDarkMode">
+            <td [class.dark-mode]="isDarkMode">Kamal Wickrama</td>
+            <td [class.dark-mode]="isDarkMode">01/11/2023</td>
+            <td [class.dark-mode]="isDarkMode">3.30</td>
+            <td [class.dark-mode]="isDarkMode">
+              <span class="status delivered">Done</span>
+            </td>
+          </tr>
+          <tr [class.dark-mode]="isDarkMode">
+            <td [class.dark-mode]="isDarkMode">Kamal Wickrama</td>
+            <td [class.dark-mode]="isDarkMode">01/11/2023</td>
+            <td [class.dark-mode]="isDarkMode">5.30</td>
+            <td [class.dark-mode]="isDarkMode">
+              <span class="status return">ToDo</span>
+            </td>
+          </tr>
+          <tr [class.dark-mode]="isDarkMode">
+            <td [class.dark-mode]="isDarkMode">Kamal Wickrama</td>
+            <td [class.dark-mode]="isDarkMode">01/11/2023</td>
+            <td [class.dark-mode]="isDarkMode">2.00</td>
+            <td [class.dark-mode]="isDarkMode">
+              <span class="status return">ToDo</span>
+            </td>
+          </tr>
+          <tr [class.dark-mode]="isDarkMode">
+            <td [class.dark-mode]="isDarkMode">Kamal Wickrama</td>
+            <td [class.dark-mode]="isDarkMode">01/11/2023</td>
+            <td [class.dark-mode]="isDarkMode">10.30</td>
+            <td [class.dark-mode]="isDarkMode">
+              <span class="status return">ToDo</span>
+            </td>
+          </tr>
+          <tr [class.dark-mode]="isDarkMode">
+            <td [class.dark-mode]="isDarkMode">Kamal Wickrama</td>
+            <td [class.dark-mode]="isDarkMode">01/11/2023</td>
+            <td [class.dark-mode]="isDarkMode">5.30</td>
+            <td [class.dark-mode]="isDarkMode">
+              <span class="status delivered">Done</span>
+            </td>
+          </tr>
+          <tr [class.dark-mode]="isDarkMode">
+            <td [class.dark-mode]="isDarkMode">Kamal Wickrama</td>
+            <td [class.dark-mode]="isDarkMode">01/11/2023</td>
+            <td [class.dark-mode]="isDarkMode">7.45</td>
+            <td [class.dark-mode]="isDarkMode">
+              <span class="status delivered">Done</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>

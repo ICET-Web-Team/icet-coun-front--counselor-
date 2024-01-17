@@ -1,0 +1,61 @@
+#dateNow{
+  font-weight: 700;
+}
+
+.box-part {
+  background-color: rgb(211, 235, 205);
+  border-radius: 20px;
+}
+.lable {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #767676;
+}
+.floatLable{
+  font-weight: 600;
+}
+
+.field {
+  margin-top: 5px;
+  border-radius: 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.customField {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(211, 235, 205);
+  background-color: rgba(255, 255, 255, 0.307);
+  border-radius: 5px;
+  padding: 8px;
+  font-size: medium;
+}
+
+.customField:hover {
+  transition-duration: 0.5s;
+  box-shadow: 0 5px 16px 0 rgb(182, 242, 167), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.customField.dark-mode {
+  color: #fff;
+}
+
+.box-part.dark-mode{
+  background-color: rgba(211, 235, 205, 0.315);
+  border-radius: 20px;
+}
+
+.lable.dark-mode {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.body.dark-mode{
+  color: white;
+}
+
+

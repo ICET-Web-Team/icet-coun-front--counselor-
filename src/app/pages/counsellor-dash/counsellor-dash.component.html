@@ -1,0 +1,91 @@
+<link
+  href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+  rel="stylesheet"
+/>
+
+<!-- SIDEBAR -->
+<section id="sidebar" style="overflow-y: hidden">
+  <a href="#" class="brand">
+    <span class="text">Haseetha</span>
+  </a>
+
+  <ul class="side-menu top">
+    <li (click)="navigateComponent('dashboard')" class="mouse-point">
+      <a>
+        <i class="bx bxs-dashboard"></i>
+        <span class="text">Dashboard</span>
+      </a>
+    </li>
+    <li (click)="navigateComponent('inquiries')" class="mouse-point">
+      <a>
+        <i class="bx bx-user-plus"></i>
+        <span class="text">Inquiries</span>
+      </a>
+    </li>
+    <li (click)="navigateComponent('issues')" class="mouse-point">
+      <a>
+        <i class="bx bxs-message-dots"></i>
+        <span class="text">Issues</span>
+      </a>
+    </li>
+    <li (click)="navigateComponent('viewtask')" class="mouse-point">
+      <a>
+        <i class="bx bi-list-task"></i>
+        <span class="text">View Task</span>
+      </a>
+    </li>
+    <li (click)="navigateComponent('callhistory')" class="mouse-point">
+      <a>
+        <i class="bx bi-telephone"></i>
+        <span class="text">Call History</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="side-menu">
+    <li (click)="navigateComponent('settings')" class="mouse-point">
+      <a>
+        <i class="bx bxs-cog"></i>
+        <span class="text">Settings</span>
+      </a>
+    </li>
+    <li (click)="navigateComponent('logout')" class="mouse-point">
+      <a class="logout">
+        <i class="bx bxs-log-out-circle"></i>
+        <span class="text">Logout</span>
+      </a>
+    </li>
+  </ul>
+</section>
+<!-- SIDEBAR -->
+
+<!-- CONTENT -->
+<section id="content">
+  <!-- NAVBAR -->
+  <nav>
+    <i class="bx bx-menu"></i>
+
+    <!-- Add the call icon -->
+    <i class="bx bx-phone" (click)="openCallDialog()"></i>
+
+    <form action="#">
+      <div class="form-input">
+        <button type="submit" class="search-btn" style="display: none"></button>
+      </div>
+    </form>
+
+    <form action="#">
+      <div class="form-input">
+        <button type="submit" class="search-btn" style="display: none"></button>
+      </div>
+    </form>
+    <input type="checkbox" id="switch-mode" (change)="setupSwitchMode()" />
+  </nav>
+  <!-- NAVBAR -->
+
+  <!-- MAIN -->
+  <div id="router-body" style="min-height: 100vh">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- MAIN -->
+</section>
+<!-- CONTENT -->

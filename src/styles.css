@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --poppins: "Poppins", sans-serif;
+    --lato: "Lato", sans-serif;
+  
+    --light: #198754;
+    /* --blue: #b0b8c1; */
+    --light-blue: #cfe8ff;
+    --grey: #eee;
+    --dark-grey: #aaaaaa;
+    --dark: #0f0116;
+    --red: #db504a;
+    --yellow: #ffce26;
+    --light-yellow: #fff2c6;
+    --orange: #fd7238;
+  
+    /* =============main color theme==================== */
+    --main-green: #21852d;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --darkback: #050d01;
+    --cardblack: #2a2e28;
+  
+    /* =================report component============= */
+    --light-orange: #ffe0d3;
+    --reportBlue: #2a2185;
+    --reportWhite: #fff;
+    --reportGray: #f5f5f5;
+    --reportBlack1: #222;
+    --reportBlack2: #999;
+  }
+  
+  body.dark {
+    --light: #0c0c1e;
+    --grey: #060714;
+    --dark: #fbfbfb;
+  }
+  

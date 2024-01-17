@@ -1,0 +1,52 @@
+<div class="container-fluid px-5">
+    <img
+      src="assets\images\slider.png"
+      alt=""
+      class="image-task"
+      style="position: relative; left: 95%; cursor: pointer"
+      (click)="showfilterPopUp()"
+    />
+  
+    <hr style="border: 1.5px solid" />
+  
+    <!-- ---------------filter popup--------------- -->
+    <div id="filterPopup" class="popup" [class.dark-mode]="isDarkMode">
+      <div style="display: flex">
+        <div>
+          <div class="row">
+            <span [class.dark-mode]="isDarkMode">Task Status</span>
+            <div class="col-1"><input type="checkbox" /></div>
+            <div class="col-6 pop-lable">To Do</div>
+          </div>
+          <div class="row">
+            <div class="col-1"><input type="checkbox" /></div>
+            <div class="col-6 pop-lable">Completed</div>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="btn custom-btn col-6 mt-4"
+          (click)="isSearchBtnClicked()"
+          [class.dark-mode]="isDarkMode" 
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  
+    <div class="row mt-5 main-task py-2" [class.dark-mode]="isDarkMode">
+      <div class="col-1 component">
+        <img src="assets\images\payment.png" alt="" class="image-task" />
+      </div>
+      <div class="col-1"></div>
+      <div class="col-5 component">
+        <div id="tittle">Remind Hasindu for payments</div>
+        <div><span [class.dark-mode]="isDarkMode">5.12 pm</span> <span class="ms-5" [class.dark-mode]="isDarkMode">Haseetha</span></div>
+      </div>
+      <div class="col-4"></div>
+      <div class="col-1 component ps-lg-4 ps-sm-0">
+        <input type="checkbox" style="height: 40px; width: 40px;">
+      </div>
+    </div>
+  </div>
+  

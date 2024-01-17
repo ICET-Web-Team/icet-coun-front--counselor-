@@ -1,0 +1,353 @@
+<!-- -------------------------------------- -->
+<div class="container body" [class.dark-mode]="isDarkMode">
+  <div class="row ms-2">
+    <div class="mt-4">
+      <h3>Inquire Registration Form</h3>
+      <p id="dateNow"></p>
+    </div>
+  </div>
+  <div class="row mt-4 ms-2">
+    <div class="col-5">
+      <div class="form-floating mb-3 m-auto">
+        <input
+          type="email"
+          class="form-control-plaintext customField"
+          id="floatingInput"
+        />
+        <label for="floatingInput" class="floatLable"
+          >Student Full Name :</label
+        >
+      </div>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-5">
+      <div class="form-floating mb-3 m-auto">
+        <input
+          type="email"
+          class="form-control-plaintext customField"
+          id="floatingInput"
+        />
+        <label for="floatingInput" class="floatLable">Email :</label>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4 box-part mx-2" [class.dark-mode]="isDarkMode">
+    <div class="row pt-4 pb-3">
+      <div class="col-4 mt-1 px-4">
+        <label for="about" class="lable" [class.dark-mode]="isDarkMode"
+          >How do You know about us*</label
+        >
+        <select class="form-select form-select-md mb-3 field" id="about">
+          <option selected value="facebook">Facebook</option>
+          <option value="instagram">Instagram</option>
+          <option value="youtube">Youtube</option>
+          <option value="friend">Friend</option>
+        </select>
+      </div>
+      <div class="col-4 mt-1 px-4">
+        <label for="interest" class="lable" [class.dark-mode]="isDarkMode"
+          >Program of interest*</label
+        >
+        <select class="form-select form-select-md mb-3 field" id="interest">
+          <option selected value="icm">iCM</option>
+          <option value="icd">iCD</option>
+          <option value="icp">iCP</option>
+        </select>
+      </div>
+      <div class="col-4 mt-1 px-4">
+        <label for="age" class="lable" [class.dark-mode]="isDarkMode"
+          >Age*</label
+        >
+        <input class="form-control field" type="number" id="age" />
+      </div>
+    </div>
+    <div class="row pb-4">
+      <div class="col-4 mt-1 px-4">
+        <label for="gender" class="lable" [class.dark-mode]="isDarkMode"
+          >Gender*</label
+        >
+        <select class="form-select form-select-md mb-3 field" id="gender">
+          <option selected value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="col-4 mt-1 px-4 px-4">
+        <label for="dob" class="lable" [class.dark-mode]="isDarkMode"
+          >Date of birth</label
+        >
+        <input type="date" name="" id="dob" class="form-control field" />
+      </div>
+      <div class="col-4 mt-1 px-4">
+        <label for="nic" class="lable" [class.dark-mode]="isDarkMode"
+          >NIC</label
+        >
+        <input type="number" id="nic" class="form-control field px-4" />
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 box-part mx-2" [class.dark-mode]="isDarkMode">
+    <div class="row my-4">
+      <div class="col-4 mt-1 px-4">
+        <label for="contact" class="lable" [class.dark-mode]="isDarkMode"
+          >Contact number</label
+        >
+        <input
+          #validContact
+          (keyup)="phoneNumberValidation(validContact)"
+          type="tel"
+          id="contact"
+          class="form-control field"
+          placeholder="07********"
+        />
+      </div>
+      <div class="col-1 ms-5" style="margin-top: 28px">
+        <button style="border: none; background: none" (click)="btnClick()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-repeat"
+            viewBox="0 0 16 10"
+          >
+            <path
+              d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="col-4 mt-1 px-4">
+        <label for="whatsapp" class="lable" [class.dark-mode]="isDarkMode"
+          >WhatsApp number</label
+        >
+        <input
+          type="number"
+          id="whatsapp"
+          class="form-control field px-4"
+          placeholder="07********"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- second page of student registation from  -->
+
+  <div class="form-floating my-5 col-6 ms-3">
+    <input
+      type="text"
+      class="form-control-plaintext customField"
+      id="floatingInput"
+    />
+    <label for="floatingInput" class="floatLable">Remarks :</label>
+  </div>
+  <div class="row mt-5 box-part mx-2" [class.dark-mode]="isDarkMode">
+    <div class="row pt-4 pb-3">
+      <div class="col-4 px-4">
+        <label for="" class="lable" [class.dark-mode]="isDarkMode"
+          >Education Level</label
+        >
+        <select class="form-select form-select-md mb-3 field">
+          <option selected>null</option>
+          <option value="1">School Basic</option>
+          <option value="2">Before O/L</option>
+          <option value="3">After O/L</option>
+          <option value="4">A/L Pending</option>
+          <option value="5">Undergraduate Non IT</option>
+          <option value="6">Undergraduate IT</option>
+          <option value="7">Graduate Non IT</option>
+          <option value="8">MSc Non IT</option>
+          <option value="9">MSc IT</option>
+          <option value="10">PhD Non IT</option>
+          <option value="11">PhD IT</option>
+        </select>
+      </div>
+      <div class="col-4 px-4">
+        <label for="" class="lable" [class.dark-mode]="isDarkMode"
+          >Employment Status</label
+        >
+        <select class="form-select form-select-md mb-3 field">
+          <option selected>null</option>
+          <option value="1">Not Employed</option>
+          <option value="2">Employed</option>
+        </select>
+      </div>
+      <div class="col-4 px-4">
+        <label for="" class="lable" [class.dark-mode]="isDarkMode">SQL</label>
+        <select class="form-select form-select-md mb-3 field">
+          <option selected>null</option>
+          <option value="1">Yes</option>
+          <option value="2">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="row pb-4">
+      <div class="col-4 px-4">
+        <label for="" class="lable" [class.dark-mode]="isDarkMode"
+          >No. of calls made</label
+        >
+        <input type="number" class="form-control field" />
+      </div>
+      <div class="col-4 px-4">
+        <label for="" class="lable" [class.dark-mode]="isDarkMode"
+          >Lead Stage</label
+        >
+        <select class="form-select field">
+          <option selected>25% (Information Sent)</option>
+          <option value="1">50% (First Call)</option>
+          <option value="2">75%</option>
+          <option value="3">100% (Registration Payment Done)</option>
+        </select>
+      </div>
+      <div class="col-4 px-4">
+        <label for="date" class="lable" [class.dark-mode]="isDarkMode"
+          >Payment Expected Date</label
+        >
+        <div class="input-group">
+          <input type="date" class="form-control field" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 box-part mx-2" [class.dark-mode]="isDarkMode">
+    <div class="row py-4">
+      <div class="col-4 px-4">
+        <label for="isVistation" class="lable" [class.dark-mode]="isDarkMode"
+          >Visitation</label
+        >
+        <select
+          #visitationSelect
+          (change)="isVisitation(visitationSelect)"
+          id="isVistation"
+          class="form-select field"
+        >
+          <option selected>No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+      <div class="col-4 px-4">
+        <label for="visitationDate" class="lable" [class.dark-mode]="isDarkMode"
+          >Date</label
+        >
+        <input
+          type="date"
+          id="visitationDate"
+          class="form-control field"
+          disabled
+        />
+      </div>
+      <div class="col-4 px-4">
+        <label for="visitationTime" class="lable" [class.dark-mode]="isDarkMode"
+          >Time</label
+        >
+        <input
+          type="time"
+          id="visitationTime"
+          class="form-control field"
+          disabled
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 box-part mx-2" [class.dark-mode]="isDarkMode">
+    <div class="row pt-4 pb-3">
+      <div class="col-4 px-4">
+        <label
+          for="isIqTestRequired"
+          class="lable"
+          [class.dark-mode]="isDarkMode"
+          >IQ Test Required</label
+        >
+        <select
+          #iqTestSelect
+          (change)="isIqTestRequired(iqTestSelect)"
+          id="isIqTestRequired"
+          class="form-select field"
+        >
+          <option selected>No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+      <div class="col-4 px-4">
+        <label for="visitationDate" class="lable" [class.dark-mode]="isDarkMode"
+          >Date</label
+        >
+        <input
+          type="date"
+          id="iqTestDate"
+          class="form-control field"
+          disabled
+        />
+      </div>
+      <div class="col-4 px-4">
+        <label for="visitationTime" class="lable" [class.dark-mode]="isDarkMode"
+          >Time</label
+        >
+        <input
+          type="time"
+          id="iqTestTime"
+          class="form-control field"
+          disabled
+        />
+      </div>
+    </div>
+    <div class="row pb-4">
+      <div class="col-4 px-4"></div>
+      <div class="col-4 px-4">
+        <label for="iqModel" class="lable" [class.dark-mode]="isDarkMode"
+          >Model</label
+        >
+        <select id="iqModel" class="form-select field" disabled>
+          <option selected>Physical</option>
+          <option value="1">Online</option>
+        </select>
+      </div>
+      <div class="col-4 px-4">
+        <label for="iqMedium" class="lable" [class.dark-mode]="isDarkMode"
+          >Medium</label
+        >
+        <select id="iqMedium" class="form-select field" disabled>
+          <option selected>Sinhala</option>
+          <option value="1">English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 mx-2">
+    <div class="col-5">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control-plaintext customField"
+          id="floatingInput"
+        />
+        <label for="floatingInput" class="floatLable"
+          >Student Background :</label
+        >
+      </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control-plaintext customField"
+          id="floatingInput"
+        />
+        <label for="floatingInput" class="floatLable"
+          >Mention If there any Blocking issue :</label
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 me-4 pb-4">
+    <div class="col-10"></div>
+    <button
+      type="button"
+      class="btn btn-danger rounded-5 col-2"
+      style="font-size: large; font-weight: 600"
+    >
+      Register <i class="bx bx-right-arrow-alt"></i>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+.th-lable {
+  font-weight: 700;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.filedSerch {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(211, 235, 205);
+  border-radius: 5px;
+}
+
+.filedSerch:hover {
+  transition-duration: 0.5s;
+  box-shadow: 0 5px 16px 0 rgb(182, 242, 167), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table-data-set1 {
+  background-color: #eeeeef;
+}
+.table-data-set2 {
+  background-color: #e7efff;
+}
+
+.table-td {
+  margin: auto;
+}
+
+/* ===============sider-bar============= */
+.bar-container {
+  width: 100%;
+  background-color: rgb(32, 32, 32);
+  text-align: center;
+  border-radius: 20px;
+}
+
+.bar {
+  border-radius: 20px;
+  width: 50%;
+  height: 7px;
+  background-color: var(--main-green);
+}
+
+/* ==================dark-mode================== */
+
+.table-header.dark-mode {
+  background-color: var(--cardblack);
+}
+
+.table-data-set1.dark-mode {
+  background-color: rgba(25, 29, 146, 0.567);
+}
+
+.table-data-set2.dark-mode {
+  background-color: rgba(104, 105, 143, 0.567);
+}
+
+.search-row.dark-mode {
+  color: white;
+}
+
+.bar-container.dark-mode {
+  background-color: white;
+}
